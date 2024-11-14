@@ -14,13 +14,13 @@ strategy:
     linux:
       imageName: "ubuntu-latest"
       jdkVersion: "1.10"
-    mac:
-      imageName: "macOS-latest"
-      jdkVersion: "1.12"
+    # mac:
+    #   imageName: "macOS-latest"
+    #   jdkVersion: "1.12"
     windows:
       imageName: "windows-latest"
       jdkversion: "1.11"
-  maxParallel: 3
+  maxParallel: 2
 
 pool:
   vmImage: $(imageName)
