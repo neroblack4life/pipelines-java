@@ -6,24 +6,27 @@
 trigger:
 - main
 
-#pool:
+pool:
+  name: n8n-devops-agents
+
+# pool:
 #  vmImage: "windows-latest"
 
-strategy:
-  matrix:
-    linux:
-      imageName: "ubuntu-latest"
-      jdkVersion: "1.10"
-    # mac:
-    #   imageName: "macOS-latest"
-    #   jdkVersion: "1.12"
-    windows:
-      imageName: "windows-latest"
-      jdkversion: "1.11"
-  maxParallel: 2
+# strategy:
+#   matrix:
+#     linux:
+#       imageName: "ubuntu-latest"
+#       jdkVersion: "1.10"
+#     # mac:
+#     #   imageName: "macOS-latest"
+#     #   jdkVersion: "1.12"
+#     windows:
+#       imageName: "windows-latest"
+#       jdkversion: "1.11"
+#   maxParallel: 2
 
-pool:
-  vmImage: $(imageName)
+# pool:
+#   vmImage: $(imageName)
 
 steps:
 - task: Maven@4
